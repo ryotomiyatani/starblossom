@@ -1,0 +1,580 @@
+@charset "UTF-8";
+@media only screen and (max-width: 1165px) {
+  .header-pc {
+    display: none;
+  }
+
+  .header-sp {
+    display: block;
+  }
+
+  .header-sp {
+    background: #F9F9F7;
+  }
+
+  .wrapper {
+    display: block;
+  }
+
+  .header-menu {
+    display: block;
+    font-weight: bold;
+    list-style: none;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  .header-inner-sp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header-menu-sp {
+    list-style-type: none;
+  }
+
+  .header-menu-sp li {
+    display: inline;
+  }
+  .header-menu-sp li:hover {
+    background-color: #692d51;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .header-logo img {
+    width: 300px;
+    height: auto;
+  }
+
+  .header-menu-sp li a {
+    text-decoration: none;
+    color: #FE66C1;
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .wrapper {
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .overlay {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+
+  .overlay.open {
+    width: 100%;
+    height: 230%;
+    opacity: 1;
+  }
+
+  .menu-trigger {
+    display: inline-block;
+    width: 36px;
+    height: 28px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+
+  .menu-trigger.active {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+
+  .menu-trigger span {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .menu-trigger.active span {
+    background-color: #fff;
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(12px) rotate(-45deg);
+            transform: translateY(12px) rotate(-45deg);
+  }
+
+  .menu-trigger span:nth-of-type(2) {
+    top: 12px;
+  }
+
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-12px) rotate(45deg);
+            transform: translateY(-12px) rotate(45deg);
+  }
+
+  nav {
+    width: 250px;
+    height: 100%;
+    padding-top: 100px;
+    background-color: rgba(128, 46, 136, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    -webkit-transform: translate(250px);
+            transform: translate(250px);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  nav.open {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+
+  nav li {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* プロフィール */
+  .profile {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .profile-detail {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .profile-image {
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .profile-detail-name-and-desc {
+    margin-left: 30px;
+  }
+
+  .profile-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  .profile-desc {
+    font-size: 15px;
+    padding-right: 5px;
+  }
+
+  .profile-history {
+    width: 100%;
+  }
+
+  .profile-history-content h3 {
+    margin: 0;
+  }
+
+  .profile-history ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .profile-history-timeline-date {
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #707070;
+  }
+
+  .profile-history-timeline-content {
+    font-size: 14px;
+    /* イベントの詳細は80% */
+    width: 90%;
+    border-left: 4px #e5e6d1 solid;
+    padding-left: 20px;
+    /* 子要素の.profile-history-timeline-contentの:beforeを相対位置表現するためにrelative>を指定する*/
+    position: relative;
+  }
+
+  .profile-history-timeline-content:before {
+    content: "";
+    /* 20pxの正方形を作る */
+    width: 20px;
+    height: 20px;
+    /* 20pxの正方形に色をつける */
+    background: #6fc173;
+    /* border-radiusを100%にして正方形を丸円にする */
+    border-radius: 100%;
+    /* 親要素に対して、絶対位置で一番上にもってくる */
+    position: absolute;
+    top: 0;
+    left: -12px;
+  }
+}
+@media only screen and (max-width: 559px) {
+  /* スマホ用画像はスマホのときは表示する */
+  .switch-img-pc {
+    display: none;
+  }
+
+  /* スマホ限定はスマホ時は非表示 */
+  .switch-img-sp {
+    display: block;
+  }
+
+  /* image */
+  .switch-img_item-sp img {
+    display: block;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .switch-img-sp {
+    display: block;
+    position: relative;
+  }
+
+  .switch-img_item-sp {
+    /* 配置の設定 */
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    /* アニメーションの設定 */
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    -webkit-transition: 1000ms;
+    transition: 1000ms;
+  }
+
+  .switch-img_item-sp.is-current {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  .key-message-text {
+    display: none;
+  }
+
+  /* プロフィール */
+  .profile {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .profile-detail {
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .profile-image {
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .profile-detail-name-and-desc {
+    margin-left: 20px;
+  }
+
+  .profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  .profile-desc {
+    font-size: 14px;
+    padding-right: 5px;
+  }
+
+  .profile-history {
+    width: 100%;
+  }
+
+  .profile-history-content h3 {
+    margin: 0;
+  }
+
+  .profile-history ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .profile-history-timeline-date {
+    width: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #707070;
+  }
+
+  .profile-history-timeline-content {
+    font-size: 14px;
+    /* イベントの詳細は80% */
+    width: 90%;
+    border-left: 4px #e5e6d1 solid;
+    padding-left: 20px;
+    /* 子要素の.profile-history-timeline-contentの:beforeを相対位置表現するためにrelative>を指定する*/
+    position: relative;
+  }
+
+  .profile-history-timeline-content:before {
+    content: "";
+    /* 20pxの正方形を作る */
+    width: 20px;
+    height: 20px;
+    /* 20pxの正方形に色をつける */
+    background: #6fc173;
+    /* border-radiusを100%にして正方形を丸円にする */
+    border-radius: 100%;
+    /* 親要素に対して、絶対位置で一番上にもってくる */
+    position: absolute;
+    top: 0;
+    left: -12px;
+  }
+
+  /** 商品紹介 */
+  .programs {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .program-image {
+    width: 100%;
+  }
+
+  .program-text {
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .program-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .program-detail {
+    color: #707070;
+  }
+
+  .program-image img {
+    max-width: 100%;
+  }
+
+  .program {
+    display: block;
+  }
+
+  .program:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  /**　ニュース */
+  .news ul {
+    list-style-type: none;
+  }
+
+  .news ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 2px dashed #d5d5d5;
+    padding: 30px 40px;
+    /* 高さを中心に合わせる */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .news ul li div {
+    line-height: 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .news-text a {
+    text-decoration: none;
+    color: #3264C2;
+  }
+
+  .news-date {
+    color: #3264C2;
+  }
+
+  .label {
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .label-notice {
+    background: #003190;
+    color: #fff;
+  }
+
+  .label-event {
+    background: #E22200;
+    color: #fff;
+  }
+
+  .news {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .overlay.open {
+    width: 100%;
+    height: 430%;
+    opacity: 1;
+  }
+
+  .footer {
+    width: 100%;
+    height: auto;
+    background-color: #174a5c;
+    color: white;
+    text-align: center;
+  }
+
+  .footer-inner {
+    display: block;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer-sitemap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 10px;
+    margin-right: 100px;
+  }
+
+  .footer-sitemap li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 5px;
+  }
+
+  .footer-sitemap a {
+    color: #ffffff;
+  }
+
+  .footer-sitemap ul li::before {
+    content: "  ▶︎  ";
+  }
+
+  .footer-sitemap ul li:last-child:after {
+    display: none;
+  }
+
+  .footer-contents {
+    display: block;
+    padding-top: 20px;
+    font-size: 10px;
+  }
+
+  .footer-address p {
+    padding-right: 0.1px;
+    text-align: left;
+  }
+
+  .footer-copy {
+    text-align: right;
+    padding-top: 10px;
+    margin-right: 10%;
+  }
+}/*# sourceMappingURL=responsive.css.map */
