@@ -244,6 +244,17 @@
      }
 }
 
+@media only screen and (max-width: 770px) {
+  .key-message-text {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #FE66C1;
+}
+}
 
 @media only screen and (max-width: 559px) {
     /* スマホ用画像はスマホのときは表示する */
@@ -289,7 +300,13 @@
     }
 
     .key-message-text {
-      display: none;
+      position: absolute;
+      top: 17%;
+      left: 15%;
+  
+      font-size: 18px;
+      font-weight: bold;
+      color: #FE66C1;
     }
 
 
